@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-10-23T15:59:42.671747" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\adina\PycharmProjects\assignment2\testCases\test.robot">
+<test id="s1-t1" name="Sign Up Test" line="5">
+<kw name="Sign Up" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:42.890012" level="INFO">Opening browser 'chrome' to base url 'https://petstore.octoperf.com/actions/Catalog.action'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-23T15:59:42.889804" elapsed="3.519306"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-23T15:59:46.409321" elapsed="0.028508"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:46.438472" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<arg>${SignInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:46.438017" elapsed="0.189507"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:46.628089" level="INFO">Clicking element 'xpath=//a[text()='Register Now!']'.</msg>
+<arg>${RegisterNow}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:46.627793" elapsed="0.189434"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:46.817843" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<arg>${UserID}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:46.817493" elapsed="0.070282"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:46.888286" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
+<arg>${NewPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:46.888006" elapsed="0.059194"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:46.947616" level="INFO">Typing text '123456' into text field 'name=repeatedPassword'.</msg>
+<arg>${RepeatPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:46.947381" elapsed="0.046406"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:46.994239" level="INFO">Typing text 'name=account.firstName' into text field 'name=account.firstName'.</msg>
+<arg>${FirstName}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:46.993989" elapsed="0.088674"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.083060" level="INFO">Typing text 'name=account.lastName' into text field 'name=account.lastName'.</msg>
+<arg>${LastName}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.082837" elapsed="0.061671"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.144908" level="INFO">Typing text 'name=account.email' into text field 'name=account.email'.</msg>
+<arg>${Email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.144683" elapsed="0.075163"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.220352" level="INFO">Typing text 'name=account.phone' into text field 'name=account.phone'.</msg>
+<arg>${Phone}</arg>
+<arg>${phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.220095" elapsed="0.064211"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.284704" level="INFO">Typing text 'Astana st 12' into text field 'name=account.address1'.</msg>
+<arg>${Address1}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.284480" elapsed="0.049728"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.334670" level="INFO">Typing text 'name=account.city' into text field 'name=account.city'.</msg>
+<arg>${City}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.334418" elapsed="0.052872"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.387695" level="INFO">Typing text 'name=account.state' into text field 'name=account.state'.</msg>
+<arg>${State}</arg>
+<arg>${state}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.387466" elapsed="0.059138"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.447077" level="INFO">Typing text 'name=account.zip' into text field 'name=account.zip'.</msg>
+<arg>${Zip}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.446824" elapsed="0.054873"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.502205" level="INFO">Typing text 'name=account.country' into text field 'name=account.country'.</msg>
+<arg>${Country}</arg>
+<arg>${country}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.501928" elapsed="0.056529"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:47.558902" level="INFO">Clicking button 'name=newAccount'.</msg>
+<arg>${SaveAccountButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.558653" elapsed="0.327733"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T15:59:49.887233" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T15:59:47.886618" elapsed="2.000763"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-23T15:59:49.887598" elapsed="2.107470"/>
+</kw>
+<status status="PASS" start="2025-10-23T15:59:42.889256" elapsed="9.105929"/>
+</kw>
+<status status="PASS" start="2025-10-23T15:59:42.888580" elapsed="9.107010"/>
+</test>
+<test id="s1-t2" name="Log In Test" line="8">
+<kw name="Log In" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:51.996993" level="INFO">Opening browser 'chrome' to base url 'https://petstore.octoperf.com/actions/Catalog.action'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-23T15:59:51.996837" elapsed="2.374230"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:54.371730" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<arg>${SignInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:54.371326" elapsed="0.181361"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:54.553703" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<arg>${LoginUser}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:54.553006" elapsed="0.062138"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:54.615673" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-10-23T15:59:54.636862" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${LoginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:54.615365" elapsed="0.056411"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:54.672225" level="INFO">Clicking button 'name=signon'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:54.672009" elapsed="0.275084"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T15:59:56.947922" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T15:59:54.947476" elapsed="2.000560"/>
+</kw>
+<status status="PASS" start="2025-10-23T15:59:51.996611" elapsed="4.951521"/>
+</kw>
+<status status="PASS" start="2025-10-23T15:59:51.995988" elapsed="4.952524"/>
+</test>
+<test id="s1-t3" name="Buy Product Test" line="11">
+<kw name="Log In" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:56.950056" level="INFO">Opening browser 'chrome' to base url 'https://petstore.octoperf.com/actions/Catalog.action'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-23T15:59:56.949914" elapsed="2.354467"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:59.304895" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<arg>${SignInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:59.304572" elapsed="0.216170"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:59.521406" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<arg>${LoginUser}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:59.521017" elapsed="0.076754"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:59.598452" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-10-23T15:59:59.630006" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${LoginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:59.598064" elapsed="0.090854"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-23T15:59:59.689569" level="INFO">Clicking button 'name=signon'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T15:59:59.689145" elapsed="0.292384"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T16:00:01.982517" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T15:59:59.981783" elapsed="2.000868"/>
+</kw>
+<status status="PASS" start="2025-10-23T15:59:56.949713" elapsed="5.033026"/>
+</kw>
+<kw name="Buy Product" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:01.983617" level="INFO">Clicking element 'xpath=//area[@alt='Fish']'.</msg>
+<arg>${FishCategory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:01.983463" elapsed="0.175556"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:02.159460" level="INFO">Clicking element 'xpath=//a[text()='FI-SW-01']'.</msg>
+<arg>xpath=//a[text()='FI-SW-01']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:02.159206" elapsed="0.703514"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:02.863205" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Add to Cart')]'.</msg>
+<arg>${AddToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:02.862970" elapsed="0.176842"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:03.040398" level="INFO">Clicking element 'xpath=//a[text()='Proceed to Checkout']'.</msg>
+<arg>${ProceedToCheckout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:03.040063" elapsed="0.179930"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:03.220532" level="INFO">Clicking button 'name=newOrder'.</msg>
+<arg>${ConfirmButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:03.220201" elapsed="0.176476"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T16:00:05.397378" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T16:00:03.396936" elapsed="2.000553"/>
+</kw>
+<status status="PASS" start="2025-10-23T16:00:01.983210" elapsed="3.414363"/>
+</kw>
+<status status="PASS" start="2025-10-23T15:59:56.949167" elapsed="8.448627"/>
+</test>
+<test id="s1-t4" name="Log Out Test" line="15">
+<kw name="Log In" owner="resources">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:05.399210" level="INFO">Opening browser 'chrome' to base url 'https://petstore.octoperf.com/actions/Catalog.action'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-23T16:00:05.398957" elapsed="2.445936"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:07.845293" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<arg>${SignInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:07.845075" elapsed="0.183972"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:08.029652" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<arg>${LoginUser}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:08.029286" elapsed="0.059074"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:08.088800" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-10-23T16:00:08.111350" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${LoginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:08.088566" elapsed="0.059315"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:08.148247" level="INFO">Clicking button 'name=signon'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:08.148052" elapsed="0.273557"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T16:00:10.422300" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T16:00:08.421859" elapsed="2.000548"/>
+</kw>
+<status status="PASS" start="2025-10-23T16:00:05.398552" elapsed="5.023969"/>
+</kw>
+<kw name="Log Out" owner="resources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-23T16:00:10.423336" level="INFO">Clicking element 'xpath=//a[text()='Sign Out']'.</msg>
+<arg>${LogOutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-23T16:00:10.423186" elapsed="0.591766"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-23T16:00:13.015811" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-23T16:00:11.015168" elapsed="2.000791"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-23T16:00:13.016162" elapsed="2.129878"/>
+</kw>
+<status status="PASS" start="2025-10-23T16:00:10.422971" elapsed="4.723222"/>
+</kw>
+<status status="PASS" start="2025-10-23T16:00:05.398078" elapsed="9.748496"/>
+</test>
+<status status="PASS" start="2025-10-23T15:59:42.672925" elapsed="32.474178"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="4" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
