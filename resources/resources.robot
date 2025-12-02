@@ -6,18 +6,20 @@ Variables   ./browserstack_variables.py
 
 *** Keywords ***
 Open Browser On BrowserStack
-    [Arguments]    ${browserName}
+    [Arguments]    ${browserName}  ${testName}
     ${caps}=    Create Dictionary
     ...    browserName=${browserName}
     ...    browserVersion=latest
     ...    os=Windows
     ...    osVersion=11
+    ...    name=${testName}
     Open Browser    ${baseUrl}    ${browserName}    remote_url=${REMOTE_URL}    desired_capabilities=${caps}
     Maximize Browser Window
 
-Sign Up
-    [Arguments]    ${browserName}
-    Open Browser On BrowserStack    ${browserName}
+
+Sign_Up
+    [Arguments]    ${browserName}  ${testName}
+    Open Browser On BrowserStack    ${browserName}  ${testName}
     Click Element    ${SignInButton}
     Click Element    ${RegisterNow}
     Input Text    ${UserID}    ${username}
@@ -36,9 +38,9 @@ Sign Up
     Sleep    2s
     Close Browser
 
-Log In
-    [Arguments]    ${browserName}
-    Open Browser On BrowserStack    ${browserName}
+Log_In
+    [Arguments]    ${browserName}  ${testName}
+    Open Browser On BrowserStack    ${browserName}  ${testName}
     Click Element    ${SignInButton}
     Input Text    ${LoginUser}    ${username}
     Input Password    ${LoginPassword}    ${password}
@@ -46,9 +48,9 @@ Log In
     Sleep    2s
     Close Browser
 
-Buy Product
-    [Arguments]    ${browserName}
-    Open Browser On BrowserStack    ${browserName}
+Buy_Product
+    [Arguments]    ${browserName}  ${testName}
+    Open Browser On BrowserStack    ${browserName}  ${testName}
     Click Element    ${FishCategory}
     Click Element    xpath=//a[text()='FI-SW-01']
     Click Element    ${AddToCartButton}
@@ -57,9 +59,9 @@ Buy Product
     Sleep    2s
     Close Browser
 
-Log Out
-    [Arguments]    ${browserName}
-    Open Browser On BrowserStack    ${browserName}
+Log_Out
+    [Arguments]    ${browserName}  ${testName}
+    Open Browser On BrowserStack    ${browserName}  ${testName}
     Click Element    ${LogOutButton}
     Sleep    2s
     Close Browser
