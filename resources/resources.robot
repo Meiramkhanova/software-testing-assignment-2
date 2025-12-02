@@ -2,11 +2,22 @@
 Library     SeleniumLibrary
 Variables   ./locators.py
 Variables   ./testData.py
+Variables   ./browserstack_variables.py
 
 *** Keywords ***
-Sign Up
-    Open Browser    ${baseUrl}    chrome
+Open Browser On BrowserStack
+    [Arguments]    ${browserName}
+    ${caps}=    Create Dictionary
+    ...    browserName=${browserName}
+    ...    browserVersion=latest
+    ...    os=Windows
+    ...    osVersion=11
+    Open Browser    ${baseUrl}    ${browserName}    remote_url=${REMOTE_URL}    desired_capabilities=${caps}
     Maximize Browser Window
+
+Sign Up
+    [Arguments]    ${browserName}
+    Open Browser On BrowserStack    ${browserName}
     Click Element    ${SignInButton}
     Click Element    ${RegisterNow}
     Input Text    ${UserID}    ${username}
@@ -26,22 +37,29 @@ Sign Up
     Close Browser
 
 Log In
-    Open Browser    ${baseUrl}    chrome
+    [Arguments]    ${browserName}
+    Open Browser On BrowserStack    ${browserName}
     Click Element    ${SignInButton}
     Input Text    ${LoginUser}    ${username}
     Input Password    ${LoginPassword}    ${password}
     Click Button    ${LoginButton}
     Sleep    2s
+    Close Browser
 
 Buy Product
+    [Arguments]    ${browserName}
+    Open Browser On BrowserStack    ${browserName}
     Click Element    ${FishCategory}
     Click Element    xpath=//a[text()='FI-SW-01']
     Click Element    ${AddToCartButton}
     Click Element    ${ProceedToCheckout}
     Click Button     ${ConfirmButton}
     Sleep    2s
+    Close Browser
 
 Log Out
+    [Arguments]    ${browserName}
+    Open Browser On BrowserStack    ${browserName}
     Click Element    ${LogOutButton}
     Sleep    2s
     Close Browser
