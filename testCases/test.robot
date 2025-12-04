@@ -4,7 +4,6 @@ Resource    ../resources/resources.robot
 *** Variables ***
 @{BROWSERS}    Chrome    Firefox    Edge
 
-
 *** Test Cases ***
 ALL_TESTS
     FOR    ${browser}    IN    @{BROWSERS}
