@@ -9,7 +9,7 @@ Resource    ../resources/resources.robot
 ALL_TESTS
     FOR    ${browser}    IN    @{BROWSERS}
         Set Suite Variable    ${BROWSER}    ${browser}
-        Log To Console    Running in ${browser}
+        Log To Console    Running in ${BROWSER}
         Sign Up Test
         Log In Test
         Buy Product Test
