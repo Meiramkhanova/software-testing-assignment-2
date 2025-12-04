@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-12-04T16:45:51.804176" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-12-04T19:13:04.991716" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="C:\Users\adina\PycharmProjects\software-testing-assignment-2-v2\testCases\test.robot">
-<test id="s1-t1" name="ALL_TESTS" line="9">
+<test id="s1-t1" name="ALL_TESTS" line="8">
 <for flavor="IN">
 <iter>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-12-04T16:45:52.092409" level="INFO">${BROWSER} = Chrome</msg>
+<msg time="2025-12-04T19:13:07.212472" level="INFO">${BROWSER} = Chrome</msg>
 <arg>${BROWSER}</arg>
 <arg>${browser}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-12-04T16:45:52.092148" elapsed="0.000341"/>
+<status status="PASS" start="2025-12-04T19:13:07.211038" elapsed="0.001897"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Running in ${browser}</arg>
+<arg>Running in ${BROWSER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-12-04T16:45:52.092663" elapsed="0.000275"/>
+<status status="PASS" start="2025-12-04T19:13:07.213780" elapsed="0.001258"/>
 </kw>
 <kw name="Sign Up Test" owner="resources">
 <kw name="Sign Up" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:45:52.094470" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
+<msg time="2025-12-04T19:13:07.225008" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -28,157 +28,157 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:45:52.094057" elapsed="0.000449"/>
+<status status="PASS" start="2025-12-04T19:13:07.221834" elapsed="0.003425"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:45:52.094948" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:45:52.095184" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
-<msg time="2025-12-04T16:46:06.335362" level="INFO">C:\Users\adina\PycharmProjects\assignment2\.venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py:419: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+<msg time="2025-12-04T19:13:07.227883" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:13:07.228992" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:13:44.811601" level="INFO">C:\Users\adina\PycharmProjects\assignment2\.venv\Lib\site-packages\selenium\webdriver\remote\remote_connection.py:419: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
   headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:45:52.094658" elapsed="14.241260"/>
+<status status="PASS" start="2025-12-04T19:13:07.226376" elapsed="37.587613"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:46:06.336508" elapsed="0.542475"/>
+<status status="PASS" start="2025-12-04T19:13:44.814701" elapsed="0.684558"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:45:52.093795" elapsed="14.785593"/>
+<status status="PASS" start="2025-12-04T19:13:07.220418" elapsed="38.279102"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:06.880601" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:13:45.500163" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:46:06.880007" elapsed="1.386388"/>
+<status status="PASS" start="2025-12-04T19:13:45.499844" elapsed="1.532110"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:46:08.266838" elapsed="0.269658"/>
+<status status="PASS" start="2025-12-04T19:13:47.032587" elapsed="0.323949"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:08.537902" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:13:47.358781" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:08.536938" elapsed="0.799976"/>
+<status status="PASS" start="2025-12-04T19:13:47.357048" elapsed="0.853982"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:09.338024" level="INFO">Clicking element 'xpath=//a[text()='Register Now!']'.</msg>
+<msg time="2025-12-04T19:13:48.212206" level="INFO">Clicking element 'xpath=//a[text()='Register Now!']'.</msg>
 <arg>${RegisterNow}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:09.337395" elapsed="1.089945"/>
+<status status="PASS" start="2025-12-04T19:13:48.211529" elapsed="0.762326"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:10.428670" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:13:48.974792" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${UserID}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:10.427890" elapsed="0.767541"/>
+<status status="PASS" start="2025-12-04T19:13:48.974236" elapsed="0.806085"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:11.196654" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:13:49.781529" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
 <arg>${NewPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:11.195889" elapsed="0.796734"/>
+<status status="PASS" start="2025-12-04T19:13:49.780795" elapsed="0.766152"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:11.993711" level="INFO">Typing text '123456' into text field 'name=repeatedPassword'.</msg>
+<msg time="2025-12-04T19:13:50.548280" level="INFO">Typing text '123456' into text field 'name=repeatedPassword'.</msg>
 <arg>${RepeatPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:11.993087" elapsed="0.751723"/>
+<status status="PASS" start="2025-12-04T19:13:50.547496" elapsed="0.791758"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:12.745767" level="INFO">Typing text 'name=account.firstName' into text field 'name=account.firstName'.</msg>
+<msg time="2025-12-04T19:13:51.340532" level="INFO">Typing text 'name=account.firstName' into text field 'name=account.firstName'.</msg>
 <arg>${FirstName}</arg>
 <arg>${firstName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:12.745223" elapsed="0.757648"/>
+<status status="PASS" start="2025-12-04T19:13:51.339739" elapsed="0.786945"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:13.503969" level="INFO">Typing text 'name=account.lastName' into text field 'name=account.lastName'.</msg>
+<msg time="2025-12-04T19:13:52.128868" level="INFO">Typing text 'name=account.lastName' into text field 'name=account.lastName'.</msg>
 <arg>${LastName}</arg>
 <arg>${lastName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:13.503302" elapsed="0.753787"/>
+<status status="PASS" start="2025-12-04T19:13:52.127545" elapsed="0.782693"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:14.258237" level="INFO">Typing text 'name=account.email' into text field 'name=account.email'.</msg>
+<msg time="2025-12-04T19:13:52.911503" level="INFO">Typing text 'name=account.email' into text field 'name=account.email'.</msg>
 <arg>${Email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:14.257559" elapsed="0.740032"/>
+<status status="PASS" start="2025-12-04T19:13:52.910767" elapsed="0.788159"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:14.998741" level="INFO">Typing text 'name=account.phone' into text field 'name=account.phone'.</msg>
+<msg time="2025-12-04T19:13:53.700587" level="INFO">Typing text 'name=account.phone' into text field 'name=account.phone'.</msg>
 <arg>${Phone}</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:14.998042" elapsed="0.752457"/>
+<status status="PASS" start="2025-12-04T19:13:53.699643" elapsed="0.757091"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:15.752162" level="INFO">Typing text 'Astana st 12' into text field 'name=account.address1'.</msg>
+<msg time="2025-12-04T19:13:54.458014" level="INFO">Typing text 'Astana st 12' into text field 'name=account.address1'.</msg>
 <arg>${Address1}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:15.750938" elapsed="0.749544"/>
+<status status="PASS" start="2025-12-04T19:13:54.457254" elapsed="0.764300"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:16.502035" level="INFO">Typing text 'name=account.city' into text field 'name=account.city'.</msg>
+<msg time="2025-12-04T19:13:55.222859" level="INFO">Typing text 'name=account.city' into text field 'name=account.city'.</msg>
 <arg>${City}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:16.501103" elapsed="0.765070"/>
+<status status="PASS" start="2025-12-04T19:13:55.222064" elapsed="0.789771"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:17.267934" level="INFO">Typing text 'name=account.state' into text field 'name=account.state'.</msg>
+<msg time="2025-12-04T19:13:56.013067" level="INFO">Typing text 'name=account.state' into text field 'name=account.state'.</msg>
 <arg>${State}</arg>
 <arg>${state}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:17.266811" elapsed="0.819875"/>
+<status status="PASS" start="2025-12-04T19:13:56.012335" elapsed="0.767313"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:18.087798" level="INFO">Typing text 'name=account.zip' into text field 'name=account.zip'.</msg>
+<msg time="2025-12-04T19:13:56.781639" level="INFO">Typing text 'name=account.zip' into text field 'name=account.zip'.</msg>
 <arg>${Zip}</arg>
 <arg>${zip}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:18.087119" elapsed="0.787444"/>
+<status status="PASS" start="2025-12-04T19:13:56.780483" elapsed="0.771136"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:18.875655" level="INFO">Typing text 'name=account.country' into text field 'name=account.country'.</msg>
+<msg time="2025-12-04T19:13:57.553447" level="INFO">Typing text 'name=account.country' into text field 'name=account.country'.</msg>
 <arg>${Country}</arg>
 <arg>${country}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:18.874992" elapsed="0.745014"/>
+<status status="PASS" start="2025-12-04T19:13:57.552390" elapsed="0.792275"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:19.620976" level="INFO">Clicking button 'name=newAccount'.</msg>
+<msg time="2025-12-04T19:13:58.345876" level="INFO">Clicking button 'name=newAccount'.</msg>
 <arg>${SaveAccountButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:19.620428" elapsed="1.127636"/>
+<status status="PASS" start="2025-12-04T19:13:58.345232" elapsed="1.137328"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:46:22.750132" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:14:01.488984" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:46:20.748501" elapsed="2.001951"/>
+<status status="PASS" start="2025-12-04T19:13:59.483387" elapsed="2.006039"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-04T16:46:22.750882" elapsed="1.683326"/>
+<status status="PASS" start="2025-12-04T19:14:01.490699" elapsed="1.752756"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:45:52.093571" elapsed="32.340914"/>
+<status status="PASS" start="2025-12-04T19:13:07.218999" elapsed="56.024849"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:45:52.093185" elapsed="32.341449"/>
+<status status="PASS" start="2025-12-04T19:13:07.216021" elapsed="56.028015"/>
 </kw>
 <kw name="Log In Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:46:24.437923" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
+<msg time="2025-12-04T19:14:03.249932" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -186,72 +186,72 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:46:24.437121" elapsed="0.000903"/>
+<status status="PASS" start="2025-12-04T19:14:03.248530" elapsed="0.001536"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:24.439019" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:46:24.439693" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:14:03.251459" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:14:03.252412" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:46:24.438374" elapsed="19.084559"/>
+<status status="PASS" start="2025-12-04T19:14:03.250605" elapsed="17.195331"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:46:43.523403" elapsed="0.605072"/>
+<status status="PASS" start="2025-12-04T19:14:20.446605" elapsed="0.499581"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:46:24.436418" elapsed="19.692328"/>
+<status status="PASS" start="2025-12-04T19:14:03.247230" elapsed="17.699446"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:44.129540" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:14:20.947963" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:46:44.129092" elapsed="1.481579"/>
+<status status="PASS" start="2025-12-04T19:14:20.947260" elapsed="1.567668"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:45.611791" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:14:22.516740" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:45.611150" elapsed="1.013946"/>
+<status status="PASS" start="2025-12-04T19:14:22.515655" elapsed="0.829541"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:46.626353" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:14:23.346928" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:46.625565" elapsed="0.816456"/>
+<status status="PASS" start="2025-12-04T19:14:23.345923" elapsed="0.785747"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:47.443104" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:46:48.032607" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:14:24.134063" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:14:24.653113" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:47.442478" elapsed="0.853966"/>
+<status status="PASS" start="2025-12-04T19:14:24.132782" elapsed="0.775961"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:48.297470" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:14:24.910430" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:46:48.296909" elapsed="1.164347"/>
+<status status="PASS" start="2025-12-04T19:14:24.909609" elapsed="1.142473"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:46:51.462931" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:14:28.054256" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:46:49.461648" elapsed="2.001622"/>
+<status status="PASS" start="2025-12-04T19:14:26.052763" elapsed="2.003615"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:46:24.435780" elapsed="27.027824"/>
+<status status="PASS" start="2025-12-04T19:14:03.245390" elapsed="24.811350"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:46:24.435044" elapsed="27.028786"/>
+<status status="PASS" start="2025-12-04T19:14:03.244513" elapsed="24.812416"/>
 </kw>
 <kw name="Buy Product Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:46:51.469046" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
+<msg time="2025-12-04T19:14:28.064173" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -259,111 +259,111 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:46:51.468201" elapsed="0.000929"/>
+<status status="PASS" start="2025-12-04T19:14:28.062928" elapsed="0.001396"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:46:51.470222" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:46:51.470880" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:14:28.066153" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:14:28.067488" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:46:51.469506" elapsed="22.965286"/>
+<status status="PASS" start="2025-12-04T19:14:28.064984" elapsed="28.627346"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:47:14.435299" elapsed="0.604426"/>
+<status status="PASS" start="2025-12-04T19:14:56.693233" elapsed="0.573048"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:46:51.466396" elapsed="23.573626"/>
+<status status="PASS" start="2025-12-04T19:14:28.061631" elapsed="29.205111"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:15.040768" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:14:57.268020" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:47:15.040332" elapsed="1.402013"/>
+<status status="PASS" start="2025-12-04T19:14:57.267326" elapsed="1.658367"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:16.443395" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:14:58.927287" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:16.442793" elapsed="0.966179"/>
+<status status="PASS" start="2025-12-04T19:14:58.926363" elapsed="1.198318"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:17.410657" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:15:00.126173" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:17.409624" elapsed="0.873937"/>
+<status status="PASS" start="2025-12-04T19:15:00.125348" elapsed="0.951056"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:18.284240" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:47:18.826007" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:15:01.078188" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:15:01.708895" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:18.283845" elapsed="0.797388"/>
+<status status="PASS" start="2025-12-04T19:15:01.077136" elapsed="0.912698"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:19.082059" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:15:01.991469" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:19.081622" elapsed="1.106554"/>
+<status status="PASS" start="2025-12-04T19:15:01.990698" elapsed="1.321863"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:47:22.189127" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:15:05.314879" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:47:20.188470" elapsed="2.001038"/>
+<status status="PASS" start="2025-12-04T19:15:03.313186" elapsed="2.002092"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:46:51.465516" elapsed="30.724351"/>
+<status status="PASS" start="2025-12-04T19:14:28.059893" elapsed="37.255779"/>
 </kw>
 <kw name="Buy Product" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:22.192052" level="INFO">Clicking element 'xpath=//a[contains(@href, 'categoryId=FISH')]'.</msg>
+<msg time="2025-12-04T19:15:05.318347" level="INFO">Clicking element 'xpath=//a[contains(@href, 'categoryId=FISH')]'.</msg>
 <arg>${FishCategory}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:22.191395" elapsed="0.819005"/>
+<status status="PASS" start="2025-12-04T19:15:05.317566" elapsed="2.068876"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:23.011591" level="INFO">Clicking element 'xpath=//a[text()='FI-SW-01']'.</msg>
+<msg time="2025-12-04T19:15:07.387468" level="INFO">Clicking element 'xpath=//a[text()='FI-SW-01']'.</msg>
 <arg>xpath=//a[text()='FI-SW-01']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:23.010934" elapsed="0.762110"/>
+<status status="PASS" start="2025-12-04T19:15:07.386908" elapsed="0.778470"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:23.773975" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Add to Cart')]'.</msg>
+<msg time="2025-12-04T19:15:08.166482" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Add to Cart')]'.</msg>
 <arg>${AddToCartButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:23.773479" elapsed="0.807514"/>
+<status status="PASS" start="2025-12-04T19:15:08.165855" elapsed="0.777284"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:24.581543" level="INFO">Clicking element 'xpath=//a[text()='Proceed to Checkout']'.</msg>
+<msg time="2025-12-04T19:15:08.944834" level="INFO">Clicking element 'xpath=//a[text()='Proceed to Checkout']'.</msg>
 <arg>${ProceedToCheckout}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:24.581236" elapsed="0.752080"/>
+<status status="PASS" start="2025-12-04T19:15:08.943922" elapsed="0.853101"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:25.333897" level="INFO">Clicking button 'name=newOrder'.</msg>
+<msg time="2025-12-04T19:15:09.798628" level="INFO">Clicking button 'name=newOrder'.</msg>
 <arg>${ConfirmButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:25.333567" elapsed="1.032406"/>
+<status status="PASS" start="2025-12-04T19:15:09.797693" elapsed="1.095501"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:47:28.367424" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:15:12.894809" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:47:26.366343" elapsed="2.001355"/>
+<status status="PASS" start="2025-12-04T19:15:10.893848" elapsed="2.001430"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:47:22.190452" elapsed="6.177495"/>
+<status status="PASS" start="2025-12-04T19:15:05.316418" elapsed="7.579324"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:46:51.464397" elapsed="36.903750"/>
+<status status="PASS" start="2025-12-04T19:14:28.057465" elapsed="44.838549"/>
 </kw>
 <kw name="Log Out Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:47:28.374273" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
+<msg time="2025-12-04T19:15:12.907996" level="INFO">&amp;{capabilities} = { browserName=Chrome | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Chrome) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -371,107 +371,107 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:47:28.373437" elapsed="0.000925"/>
+<status status="PASS" start="2025-12-04T19:15:12.906272" elapsed="0.001904"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:28.375391" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:47:28.376119" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:15:12.911473" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:15:12.912654" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:47:28.374727" elapsed="22.002926"/>
+<status status="PASS" start="2025-12-04T19:15:12.910095" elapsed="19.822326"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:47:50.378017" elapsed="0.544368"/>
+<status status="PASS" start="2025-12-04T19:15:32.732745" elapsed="0.517188"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:47:28.370988" elapsed="22.551703"/>
+<status status="PASS" start="2025-12-04T19:15:12.900209" elapsed="20.349931"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:50.923461" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:15:33.251520" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:47:50.923023" elapsed="1.383686"/>
+<status status="PASS" start="2025-12-04T19:15:33.251177" elapsed="1.335751"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:52.307341" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:15:34.587698" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:52.306998" elapsed="0.991850"/>
+<status status="PASS" start="2025-12-04T19:15:34.587274" elapsed="0.802031"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:53.300162" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:15:35.390063" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:53.299371" elapsed="0.900909"/>
+<status status="PASS" start="2025-12-04T19:15:35.389597" elapsed="0.775458"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:54.200932" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:47:54.763125" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:15:36.165859" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:15:36.698310" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:54.200552" elapsed="0.829382"/>
+<status status="PASS" start="2025-12-04T19:15:36.165358" elapsed="0.794760"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:55.030944" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:15:36.960619" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:55.030376" elapsed="1.148971"/>
+<status status="PASS" start="2025-12-04T19:15:36.960331" elapsed="1.140474"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:47:58.180623" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:15:40.102078" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:47:56.179800" elapsed="2.001109"/>
+<status status="PASS" start="2025-12-04T19:15:38.101344" elapsed="2.000946"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:47:28.369746" elapsed="29.811423"/>
+<status status="PASS" start="2025-12-04T19:15:12.898729" elapsed="27.203734"/>
 </kw>
 <kw name="Log Out" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:47:58.183405" level="INFO">Clicking element 'xpath=//a[text()='Sign Out']'.</msg>
+<msg time="2025-12-04T19:15:40.104524" level="INFO">Clicking element 'xpath=//a[text()='Sign Out']'.</msg>
 <arg>${LogOutButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:47:58.182776" elapsed="0.876493"/>
+<status status="PASS" start="2025-12-04T19:15:40.104087" elapsed="0.937815"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:48:01.060355" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:15:43.043131" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:47:59.059663" elapsed="2.000975"/>
+<status status="PASS" start="2025-12-04T19:15:41.042287" elapsed="2.000990"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-04T16:48:01.061106" elapsed="1.748418"/>
+<status status="PASS" start="2025-12-04T19:15:43.043535" elapsed="1.538002"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:47:58.181818" elapsed="4.628024"/>
+<status status="PASS" start="2025-12-04T19:15:40.103424" elapsed="4.478402"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:47:28.368604" elapsed="34.441393"/>
+<status status="PASS" start="2025-12-04T19:15:12.896720" elapsed="31.685241"/>
 </kw>
 <var name="${browser}">Chrome</var>
-<status status="PASS" start="2025-12-04T16:45:52.091381" elapsed="130.718722"/>
+<status status="PASS" start="2025-12-04T19:13:07.207081" elapsed="157.374967"/>
 </iter>
 <iter>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-12-04T16:48:02.811411" level="INFO">${BROWSER} = Firefox</msg>
+<msg time="2025-12-04T19:15:44.583284" level="INFO">${BROWSER} = Firefox</msg>
 <arg>${BROWSER}</arg>
 <arg>${browser}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-12-04T16:48:02.810907" elapsed="0.000626"/>
+<status status="PASS" start="2025-12-04T19:15:44.582804" elapsed="0.000589"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Running in ${browser}</arg>
+<arg>Running in ${BROWSER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-12-04T16:48:02.811796" elapsed="0.000694"/>
+<status status="PASS" start="2025-12-04T19:15:44.583641" elapsed="0.000824"/>
 </kw>
 <kw name="Sign Up Test" owner="resources">
 <kw name="Sign Up" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:48:02.815630" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
+<msg time="2025-12-04T19:15:44.587809" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -479,155 +479,155 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:48:02.814780" elapsed="0.000948"/>
+<status status="PASS" start="2025-12-04T19:15:44.587122" elapsed="0.000777"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:02.816721" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:48:02.817364" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:15:44.589317" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:15:44.590386" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:48:02.816101" elapsed="16.176493"/>
+<status status="PASS" start="2025-12-04T19:15:44.588240" elapsed="19.643371"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:48:18.992884" elapsed="0.544494"/>
+<status status="PASS" start="2025-12-04T19:16:04.232216" elapsed="0.562201"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:48:02.814208" elapsed="16.723469"/>
+<status status="PASS" start="2025-12-04T19:15:44.586273" elapsed="20.208441"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:19.538452" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:16:04.795536" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:48:19.538028" elapsed="1.284294"/>
+<status status="PASS" start="2025-12-04T19:16:04.795073" elapsed="1.400033"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:48:20.822693" elapsed="0.310527"/>
+<status status="PASS" start="2025-12-04T19:16:06.195810" elapsed="0.323748"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:21.133902" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:16:06.521440" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:21.133515" elapsed="0.770905"/>
+<status status="PASS" start="2025-12-04T19:16:06.520170" elapsed="1.086068"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:21.905181" level="INFO">Clicking element 'xpath=//a[text()='Register Now!']'.</msg>
+<msg time="2025-12-04T19:16:07.607982" level="INFO">Clicking element 'xpath=//a[text()='Register Now!']'.</msg>
 <arg>${RegisterNow}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:21.904750" elapsed="0.741552"/>
+<status status="PASS" start="2025-12-04T19:16:07.607025" elapsed="0.758574"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:22.647116" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:16:08.367548" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${UserID}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:22.646630" elapsed="1.056556"/>
+<status status="PASS" start="2025-12-04T19:16:08.366304" elapsed="0.812441"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:23.704176" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:16:09.180015" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
 <arg>${NewPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:23.703590" elapsed="0.784928"/>
+<status status="PASS" start="2025-12-04T19:16:09.179301" elapsed="0.825152"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:24.489170" level="INFO">Typing text '123456' into text field 'name=repeatedPassword'.</msg>
+<msg time="2025-12-04T19:16:10.006615" level="INFO">Typing text '123456' into text field 'name=repeatedPassword'.</msg>
 <arg>${RepeatPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:24.488790" elapsed="0.781399"/>
+<status status="PASS" start="2025-12-04T19:16:10.005287" elapsed="0.772028"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:25.270852" level="INFO">Typing text 'name=account.firstName' into text field 'name=account.firstName'.</msg>
+<msg time="2025-12-04T19:16:10.778727" level="INFO">Typing text 'name=account.firstName' into text field 'name=account.firstName'.</msg>
 <arg>${FirstName}</arg>
 <arg>${firstName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:25.270479" elapsed="0.793432"/>
+<status status="PASS" start="2025-12-04T19:16:10.777921" elapsed="0.811614"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:26.064988" level="INFO">Typing text 'name=account.lastName' into text field 'name=account.lastName'.</msg>
+<msg time="2025-12-04T19:16:11.590792" level="INFO">Typing text 'name=account.lastName' into text field 'name=account.lastName'.</msg>
 <arg>${LastName}</arg>
 <arg>${lastName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:26.064351" elapsed="0.812841"/>
+<status status="PASS" start="2025-12-04T19:16:11.590090" elapsed="0.835985"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:26.878546" level="INFO">Typing text 'name=account.email' into text field 'name=account.email'.</msg>
+<msg time="2025-12-04T19:16:12.427317" level="INFO">Typing text 'name=account.email' into text field 'name=account.email'.</msg>
 <arg>${Email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:26.877793" elapsed="0.778634"/>
+<status status="PASS" start="2025-12-04T19:16:12.426577" elapsed="0.772825"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:27.657112" level="INFO">Typing text 'name=account.phone' into text field 'name=account.phone'.</msg>
+<msg time="2025-12-04T19:16:13.201256" level="INFO">Typing text 'name=account.phone' into text field 'name=account.phone'.</msg>
 <arg>${Phone}</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:27.656705" elapsed="0.779334"/>
+<status status="PASS" start="2025-12-04T19:16:13.200230" elapsed="0.784307"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:28.437092" level="INFO">Typing text 'Astana st 12' into text field 'name=account.address1'.</msg>
+<msg time="2025-12-04T19:16:13.986361" level="INFO">Typing text 'Astana st 12' into text field 'name=account.address1'.</msg>
 <arg>${Address1}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:28.436454" elapsed="0.803087"/>
+<status status="PASS" start="2025-12-04T19:16:13.985306" elapsed="0.770530"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:29.240680" level="INFO">Typing text 'name=account.city' into text field 'name=account.city'.</msg>
+<msg time="2025-12-04T19:16:14.757745" level="INFO">Typing text 'name=account.city' into text field 'name=account.city'.</msg>
 <arg>${City}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:29.239979" elapsed="0.794164"/>
+<status status="PASS" start="2025-12-04T19:16:14.756646" elapsed="0.752946"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:30.035270" level="INFO">Typing text 'name=account.state' into text field 'name=account.state'.</msg>
+<msg time="2025-12-04T19:16:15.511422" level="INFO">Typing text 'name=account.state' into text field 'name=account.state'.</msg>
 <arg>${State}</arg>
 <arg>${state}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:30.034607" elapsed="0.817446"/>
+<status status="PASS" start="2025-12-04T19:16:15.510226" elapsed="0.803025"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:30.853160" level="INFO">Typing text 'name=account.zip' into text field 'name=account.zip'.</msg>
+<msg time="2025-12-04T19:16:16.315060" level="INFO">Typing text 'name=account.zip' into text field 'name=account.zip'.</msg>
 <arg>${Zip}</arg>
 <arg>${zip}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:30.852502" elapsed="0.800500"/>
+<status status="PASS" start="2025-12-04T19:16:16.314060" elapsed="0.774191"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:31.654695" level="INFO">Typing text 'name=account.country' into text field 'name=account.country'.</msg>
+<msg time="2025-12-04T19:16:17.090302" level="INFO">Typing text 'name=account.country' into text field 'name=account.country'.</msg>
 <arg>${Country}</arg>
 <arg>${country}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:31.653906" elapsed="0.874553"/>
+<status status="PASS" start="2025-12-04T19:16:17.089144" elapsed="0.786326"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:32.530233" level="INFO">Clicking button 'name=newAccount'.</msg>
+<msg time="2025-12-04T19:16:17.877141" level="INFO">Clicking button 'name=newAccount'.</msg>
 <arg>${SaveAccountButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:32.529102" elapsed="1.216309"/>
+<status status="PASS" start="2025-12-04T19:16:17.876297" elapsed="1.207657"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:48:35.747195" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:16:21.085849" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:48:33.745887" elapsed="2.001697"/>
+<status status="PASS" start="2025-12-04T19:16:19.084631" elapsed="2.001629"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-04T16:48:35.748142" elapsed="1.608196"/>
+<status status="PASS" start="2025-12-04T19:16:21.086921" elapsed="1.521174"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:48:02.813709" elapsed="34.542934"/>
+<status status="PASS" start="2025-12-04T19:15:44.585729" elapsed="38.022744"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:48:02.812948" elapsed="34.543857"/>
+<status status="PASS" start="2025-12-04T19:15:44.584946" elapsed="38.023708"/>
 </kw>
 <kw name="Log In Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:48:37.360106" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
+<msg time="2025-12-04T19:16:22.613237" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -635,72 +635,72 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:48:37.359224" elapsed="0.000979"/>
+<status status="PASS" start="2025-12-04T19:16:22.611667" elapsed="0.001766"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:37.361288" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:48:37.361999" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:16:22.615250" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:16:22.616241" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:48:37.360605" elapsed="17.732373"/>
+<status status="PASS" start="2025-12-04T19:16:22.614165" elapsed="20.975250"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:48:55.093458" elapsed="0.503533"/>
+<status status="PASS" start="2025-12-04T19:16:43.589630" elapsed="0.560330"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:48:37.358564" elapsed="18.238705"/>
+<status status="PASS" start="2025-12-04T19:16:22.610637" elapsed="21.539495"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:55.598031" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:16:44.150615" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:48:55.597607" elapsed="1.223160"/>
+<status status="PASS" start="2025-12-04T19:16:44.150336" elapsed="1.401201"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:56.822007" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:16:45.553287" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:56.821407" elapsed="0.786022"/>
+<status status="PASS" start="2025-12-04T19:16:45.552421" elapsed="0.970631"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:57.608879" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:16:46.524508" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:57.607965" elapsed="0.773542"/>
+<status status="PASS" start="2025-12-04T19:16:46.523766" elapsed="0.849777"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:58.382586" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:48:58.915279" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:16:47.375336" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:16:47.965195" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:58.381944" elapsed="0.785208"/>
+<status status="PASS" start="2025-12-04T19:16:47.374293" elapsed="0.892438"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:48:59.168147" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:16:48.267774" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:48:59.167596" elapsed="1.068283"/>
+<status status="PASS" start="2025-12-04T19:16:48.267217" elapsed="1.222017"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:49:02.237066" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:16:51.491191" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:49:00.236306" elapsed="2.001038"/>
+<status status="PASS" start="2025-12-04T19:16:49.489993" elapsed="2.001489"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:48:37.357973" elapsed="24.879648"/>
+<status status="PASS" start="2025-12-04T19:16:22.609974" elapsed="28.882058"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:48:37.357239" elapsed="24.880530"/>
+<status status="PASS" start="2025-12-04T19:16:22.609147" elapsed="28.883100"/>
 </kw>
 <kw name="Buy Product Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:49:02.241053" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
+<msg time="2025-12-04T19:16:51.496145" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -708,111 +708,111 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:49:02.240236" elapsed="0.000901"/>
+<status status="PASS" start="2025-12-04T19:16:51.495204" elapsed="0.001037"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:02.242157" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:49:02.242859" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:16:51.497889" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:16:51.498730" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:49:02.241492" elapsed="13.801507"/>
+<status status="PASS" start="2025-12-04T19:16:51.496681" elapsed="14.528458"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:49:16.043533" elapsed="0.560980"/>
+<status status="PASS" start="2025-12-04T19:17:06.025539" elapsed="0.563494"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:49:02.239556" elapsed="14.365221"/>
+<status status="PASS" start="2025-12-04T19:16:51.494252" elapsed="15.094901"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:16.605482" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:17:06.590356" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:49:16.605084" elapsed="1.295771"/>
+<status status="PASS" start="2025-12-04T19:17:06.589567" elapsed="1.525986"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:17.901496" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:17:08.116528" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:17.901129" elapsed="0.791655"/>
+<status status="PASS" start="2025-12-04T19:17:08.115962" elapsed="0.835088"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:18.693239" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:17:08.952047" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:18.692977" elapsed="0.798802"/>
+<status status="PASS" start="2025-12-04T19:17:08.951469" elapsed="0.799462"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:19.493101" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:49:19.995378" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:17:09.752215" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:17:10.290592" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:19.492323" elapsed="0.762390"/>
+<status status="PASS" start="2025-12-04T19:17:09.751363" elapsed="0.814900"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:20.255269" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:17:10.566827" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:20.254964" elapsed="2.131435"/>
+<status status="PASS" start="2025-12-04T19:17:10.566531" elapsed="1.121335"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:49:24.387306" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:17:13.688863" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:49:22.386672" elapsed="2.000884"/>
+<status status="PASS" start="2025-12-04T19:17:11.688273" elapsed="2.000770"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:49:02.238982" elapsed="22.148814"/>
+<status status="PASS" start="2025-12-04T19:16:51.493633" elapsed="22.195573"/>
 </kw>
 <kw name="Buy Product" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:24.389351" level="INFO">Clicking element 'xpath=//a[contains(@href, 'categoryId=FISH')]'.</msg>
+<msg time="2025-12-04T19:17:13.690315" level="INFO">Clicking element 'xpath=//a[contains(@href, 'categoryId=FISH')]'.</msg>
 <arg>${FishCategory}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:24.388853" elapsed="0.717173"/>
+<status status="PASS" start="2025-12-04T19:17:13.689985" elapsed="0.741580"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:25.106761" level="INFO">Clicking element 'xpath=//a[text()='FI-SW-01']'.</msg>
+<msg time="2025-12-04T19:17:14.432253" level="INFO">Clicking element 'xpath=//a[text()='FI-SW-01']'.</msg>
 <arg>xpath=//a[text()='FI-SW-01']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:25.106380" elapsed="0.705846"/>
+<status status="PASS" start="2025-12-04T19:17:14.431896" elapsed="0.815211"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:25.813414" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Add to Cart')]'.</msg>
+<msg time="2025-12-04T19:17:15.247620" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Add to Cart')]'.</msg>
 <arg>${AddToCartButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:25.812742" elapsed="0.714677"/>
+<status status="PASS" start="2025-12-04T19:17:15.247337" elapsed="0.722223"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:26.528026" level="INFO">Clicking element 'xpath=//a[text()='Proceed to Checkout']'.</msg>
+<msg time="2025-12-04T19:17:15.970940" level="INFO">Clicking element 'xpath=//a[text()='Proceed to Checkout']'.</msg>
 <arg>${ProceedToCheckout}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:26.527685" elapsed="0.689305"/>
+<status status="PASS" start="2025-12-04T19:17:15.969927" elapsed="0.716758"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:27.218020" level="INFO">Clicking button 'name=newOrder'.</msg>
+<msg time="2025-12-04T19:17:16.687252" level="INFO">Clicking button 'name=newOrder'.</msg>
 <arg>${ConfirmButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:27.217423" elapsed="0.939233"/>
+<status status="PASS" start="2025-12-04T19:17:16.686931" elapsed="1.011514"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:49:30.158411" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:17:19.701177" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:49:28.157332" elapsed="2.001440"/>
+<status status="PASS" start="2025-12-04T19:17:17.699504" elapsed="2.001925"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:49:24.388251" elapsed="5.770857"/>
+<status status="PASS" start="2025-12-04T19:17:13.689518" elapsed="6.012161"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:49:02.238232" elapsed="27.921099"/>
+<status status="PASS" start="2025-12-04T19:16:51.492801" elapsed="28.209011"/>
 </kw>
 <kw name="Log Out Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:49:30.163042" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
+<msg time="2025-12-04T19:17:19.704981" level="INFO">&amp;{capabilities} = { browserName=Firefox | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Firefox) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -820,107 +820,107 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:49:30.162178" elapsed="0.000956"/>
+<status status="PASS" start="2025-12-04T19:17:19.704168" elapsed="0.000901"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:30.164248" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:49:30.164904" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:17:19.706835" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:17:19.707996" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:49:30.163544" elapsed="19.871939"/>
+<status status="PASS" start="2025-12-04T19:17:19.705444" elapsed="19.899349"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:49:50.035763" elapsed="0.570955"/>
+<status status="PASS" start="2025-12-04T19:17:39.605298" elapsed="0.592912"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:49:30.161463" elapsed="20.445598"/>
+<status status="PASS" start="2025-12-04T19:17:19.703556" elapsed="20.494978"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:50.607989" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:17:40.199382" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:49:50.607474" elapsed="1.325964"/>
+<status status="PASS" start="2025-12-04T19:17:40.198950" elapsed="1.396161"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:51.934024" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:17:41.596354" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:51.933714" elapsed="0.818759"/>
+<status status="PASS" start="2025-12-04T19:17:41.595662" elapsed="1.058088"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:52.753168" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:17:42.655030" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:52.752731" elapsed="0.834389"/>
+<status status="PASS" start="2025-12-04T19:17:42.654290" elapsed="0.932138"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:53.587764" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:49:54.111149" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:17:43.604021" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:17:44.308215" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:53.587340" elapsed="0.779127"/>
+<status status="PASS" start="2025-12-04T19:17:43.602817" elapsed="0.969244"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:54.367422" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:17:44.573591" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:54.366880" elapsed="1.214321"/>
+<status status="PASS" start="2025-12-04T19:17:44.572754" elapsed="1.179172"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:49:57.582520" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:17:47.754776" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:49:55.581610" elapsed="2.001281"/>
+<status status="PASS" start="2025-12-04T19:17:45.752531" elapsed="2.002955"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:49:30.160860" elapsed="27.422389"/>
+<status status="PASS" start="2025-12-04T19:17:19.703021" elapsed="28.053093"/>
 </kw>
 <kw name="Log Out" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:49:57.585510" level="INFO">Clicking element 'xpath=//a[text()='Sign Out']'.</msg>
+<msg time="2025-12-04T19:17:47.758671" level="INFO">Clicking element 'xpath=//a[text()='Sign Out']'.</msg>
 <arg>${LogOutButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:49:57.584846" elapsed="0.908803"/>
+<status status="PASS" start="2025-12-04T19:17:47.757928" elapsed="0.872594"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:50:00.494814" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:17:50.632478" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:49:58.494076" elapsed="2.000891"/>
+<status status="PASS" start="2025-12-04T19:17:48.631015" elapsed="2.001766"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-04T16:50:00.495140" elapsed="1.654196"/>
+<status status="PASS" start="2025-12-04T19:17:50.633236" elapsed="1.531650"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:49:57.583874" elapsed="4.565583"/>
+<status status="PASS" start="2025-12-04T19:17:47.756873" elapsed="4.408416"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:49:30.160013" elapsed="31.989486"/>
+<status status="PASS" start="2025-12-04T19:17:19.702264" elapsed="32.463194"/>
 </kw>
 <var name="${browser}">Firefox</var>
-<status status="PASS" start="2025-12-04T16:48:02.810600" elapsed="119.338937"/>
+<status status="PASS" start="2025-12-04T19:15:44.582496" elapsed="127.583074"/>
 </iter>
 <iter>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2025-12-04T16:50:02.149920" level="INFO">${BROWSER} = Edge</msg>
+<msg time="2025-12-04T19:17:52.166987" level="INFO">${BROWSER} = Edge</msg>
 <arg>${BROWSER}</arg>
 <arg>${browser}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2025-12-04T16:50:02.149778" elapsed="0.000174"/>
+<status status="PASS" start="2025-12-04T19:17:52.166410" elapsed="0.000750"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Running in ${browser}</arg>
+<arg>Running in ${BROWSER}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-12-04T16:50:02.150027" elapsed="0.000235"/>
+<status status="PASS" start="2025-12-04T19:17:52.167475" elapsed="0.000909"/>
 </kw>
 <kw name="Sign Up Test" owner="resources">
 <kw name="Sign Up" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:50:02.151099" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
+<msg time="2025-12-04T19:17:52.173180" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -928,155 +928,155 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:50:02.150896" elapsed="0.000225"/>
+<status status="PASS" start="2025-12-04T19:17:52.171691" elapsed="0.001718"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:02.151415" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:50:02.151579" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:17:52.175840" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:17:52.176584" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:50:02.151210" elapsed="15.687604"/>
+<status status="PASS" start="2025-12-04T19:17:52.174162" elapsed="14.814992"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:50:17.839040" elapsed="0.516702"/>
+<status status="PASS" start="2025-12-04T19:18:06.989741" elapsed="0.506445"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:50:02.150738" elapsed="16.205099"/>
+<status status="PASS" start="2025-12-04T19:17:52.170905" elapsed="15.325590"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:18.356083" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:18:07.497358" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:50:18.355947" elapsed="1.521614"/>
+<status status="PASS" start="2025-12-04T19:18:07.496865" elapsed="1.348690"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:50:19.877713" elapsed="0.273390"/>
+<status status="PASS" start="2025-12-04T19:18:08.846300" elapsed="0.321544"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:20.151621" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:18:09.169446" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:20.151319" elapsed="0.747869"/>
+<status status="PASS" start="2025-12-04T19:18:09.168551" elapsed="0.784509"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:20.899518" level="INFO">Clicking element 'xpath=//a[text()='Register Now!']'.</msg>
+<msg time="2025-12-04T19:18:09.953798" level="INFO">Clicking element 'xpath=//a[text()='Register Now!']'.</msg>
 <arg>${RegisterNow}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:20.899343" elapsed="0.732597"/>
+<status status="PASS" start="2025-12-04T19:18:09.953376" elapsed="0.741093"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:21.632325" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:18:10.695368" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${UserID}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:21.632115" elapsed="0.781347"/>
+<status status="PASS" start="2025-12-04T19:18:10.694788" elapsed="0.768438"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:22.413814" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:18:11.464555" level="INFO">Typing text '123456' into text field 'name=password'.</msg>
 <arg>${NewPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:22.413623" elapsed="0.745304"/>
+<status status="PASS" start="2025-12-04T19:18:11.463703" elapsed="0.751907"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:23.159274" level="INFO">Typing text '123456' into text field 'name=repeatedPassword'.</msg>
+<msg time="2025-12-04T19:18:12.216457" level="INFO">Typing text '123456' into text field 'name=repeatedPassword'.</msg>
 <arg>${RepeatPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:23.159081" elapsed="0.731776"/>
+<status status="PASS" start="2025-12-04T19:18:12.215956" elapsed="0.802713"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:23.891200" level="INFO">Typing text 'name=account.firstName' into text field 'name=account.firstName'.</msg>
+<msg time="2025-12-04T19:18:13.020220" level="INFO">Typing text 'name=account.firstName' into text field 'name=account.firstName'.</msg>
 <arg>${FirstName}</arg>
 <arg>${firstName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:23.891010" elapsed="0.781375"/>
+<status status="PASS" start="2025-12-04T19:18:13.019267" elapsed="0.837264"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:24.672731" level="INFO">Typing text 'name=account.lastName' into text field 'name=account.lastName'.</msg>
+<msg time="2025-12-04T19:18:13.858240" level="INFO">Typing text 'name=account.lastName' into text field 'name=account.lastName'.</msg>
 <arg>${LastName}</arg>
 <arg>${lastName}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:24.672539" elapsed="0.755570"/>
+<status status="PASS" start="2025-12-04T19:18:13.857204" elapsed="0.781472"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:25.428452" level="INFO">Typing text 'name=account.email' into text field 'name=account.email'.</msg>
+<msg time="2025-12-04T19:18:14.640679" level="INFO">Typing text 'name=account.email' into text field 'name=account.email'.</msg>
 <arg>${Email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:25.428264" elapsed="0.737409"/>
+<status status="PASS" start="2025-12-04T19:18:14.639549" elapsed="0.765255"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:26.166017" level="INFO">Typing text 'name=account.phone' into text field 'name=account.phone'.</msg>
+<msg time="2025-12-04T19:18:15.406286" level="INFO">Typing text 'name=account.phone' into text field 'name=account.phone'.</msg>
 <arg>${Phone}</arg>
 <arg>${phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:26.165828" elapsed="0.791003"/>
+<status status="PASS" start="2025-12-04T19:18:15.405498" elapsed="1.177316"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:26.957326" level="INFO">Typing text 'Astana st 12' into text field 'name=account.address1'.</msg>
+<msg time="2025-12-04T19:18:16.584933" level="INFO">Typing text 'Astana st 12' into text field 'name=account.address1'.</msg>
 <arg>${Address1}</arg>
 <arg>${address}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:26.957007" elapsed="0.792271"/>
+<status status="PASS" start="2025-12-04T19:18:16.583816" elapsed="0.741156"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:27.749624" level="INFO">Typing text 'name=account.city' into text field 'name=account.city'.</msg>
+<msg time="2025-12-04T19:18:17.326932" level="INFO">Typing text 'name=account.city' into text field 'name=account.city'.</msg>
 <arg>${City}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:27.749433" elapsed="0.761186"/>
+<status status="PASS" start="2025-12-04T19:18:17.325866" elapsed="0.757504"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:28.510969" level="INFO">Typing text 'name=account.state' into text field 'name=account.state'.</msg>
+<msg time="2025-12-04T19:18:18.085100" level="INFO">Typing text 'name=account.state' into text field 'name=account.state'.</msg>
 <arg>${State}</arg>
 <arg>${state}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:28.510776" elapsed="0.746564"/>
+<status status="PASS" start="2025-12-04T19:18:18.084065" elapsed="0.756936"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:29.257684" level="INFO">Typing text 'name=account.zip' into text field 'name=account.zip'.</msg>
+<msg time="2025-12-04T19:18:18.842818" level="INFO">Typing text 'name=account.zip' into text field 'name=account.zip'.</msg>
 <arg>${Zip}</arg>
 <arg>${zip}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:29.257492" elapsed="0.760590"/>
+<status status="PASS" start="2025-12-04T19:18:18.841768" elapsed="0.777791"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:30.018429" level="INFO">Typing text 'name=account.country' into text field 'name=account.country'.</msg>
+<msg time="2025-12-04T19:18:19.621243" level="INFO">Typing text 'name=account.country' into text field 'name=account.country'.</msg>
 <arg>${Country}</arg>
 <arg>${country}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:30.018234" elapsed="0.743464"/>
+<status status="PASS" start="2025-12-04T19:18:19.620126" elapsed="0.746607"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:30.762048" level="INFO">Clicking button 'name=newAccount'.</msg>
+<msg time="2025-12-04T19:18:20.368745" level="INFO">Clicking button 'name=newAccount'.</msg>
 <arg>${SaveAccountButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:50:30.761869" elapsed="1.114001"/>
+<status status="PASS" start="2025-12-04T19:18:20.367613" elapsed="1.130364"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:50:33.876407" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:18:23.500539" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:50:31.876024" elapsed="2.000498"/>
+<status status="PASS" start="2025-12-04T19:18:21.499113" elapsed="2.001828"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-04T16:50:33.876667" elapsed="1.780952"/>
+<status status="PASS" start="2025-12-04T19:18:23.501614" elapsed="1.534928"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:50:02.150600" elapsed="33.507115"/>
+<status status="PASS" start="2025-12-04T19:17:52.169809" elapsed="32.867239"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:50:02.150396" elapsed="33.507359"/>
+<status status="PASS" start="2025-12-04T19:17:52.168905" elapsed="32.868446"/>
 </kw>
 <kw name="Log In Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:50:35.658611" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
+<msg time="2025-12-04T19:18:25.044070" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -1084,72 +1084,72 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:50:35.658386" elapsed="0.000249"/>
+<status status="PASS" start="2025-12-04T19:18:25.042384" elapsed="0.001882"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:50:35.658912" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:50:35.659385" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:18:25.046470" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:18:25.047516" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:50:35.658733" elapsed="27.251490"/>
+<status status="PASS" start="2025-12-04T19:18:25.045008" elapsed="21.379365"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:51:02.910381" elapsed="0.556084"/>
+<status status="PASS" start="2025-12-04T19:18:46.424654" elapsed="0.556166"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:50:35.658221" elapsed="27.808334"/>
+<status status="PASS" start="2025-12-04T19:18:25.041043" elapsed="21.939963"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:03.466797" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:18:46.981589" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:51:03.466664" elapsed="2.035495"/>
+<status status="PASS" start="2025-12-04T19:18:46.981224" elapsed="1.372020"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:05.502488" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:18:48.354721" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:05.502310" elapsed="1.316522"/>
+<status status="PASS" start="2025-12-04T19:18:48.353831" elapsed="0.904017"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:06.819333" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:18:49.259868" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:06.819047" elapsed="0.922765"/>
+<status status="PASS" start="2025-12-04T19:18:49.259112" elapsed="0.874867"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:07.742162" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:51:08.310461" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:18:50.134764" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:18:50.656406" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:07.741966" elapsed="0.868574"/>
+<status status="PASS" start="2025-12-04T19:18:50.134312" elapsed="0.806739"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:08.610850" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:18:50.942264" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:08.610689" elapsed="1.261187"/>
+<status status="PASS" start="2025-12-04T19:18:50.941608" elapsed="1.221585"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:51:11.872461" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:18:54.164402" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:51:09.872025" elapsed="2.000545"/>
+<status status="PASS" start="2025-12-04T19:18:52.163505" elapsed="2.001280"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:50:35.658084" elapsed="36.214569"/>
+<status status="PASS" start="2025-12-04T19:18:25.039503" elapsed="29.125677"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:50:35.657885" elapsed="36.214808"/>
+<status status="PASS" start="2025-12-04T19:18:25.038101" elapsed="29.127346"/>
 </kw>
 <kw name="Buy Product Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:51:11.873557" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
+<msg time="2025-12-04T19:18:54.171067" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -1157,111 +1157,111 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:51:11.873349" elapsed="0.000229"/>
+<status status="PASS" start="2025-12-04T19:18:54.169640" elapsed="0.001582"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:11.873843" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:51:11.874149" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:18:54.172922" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:18:54.173836" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:51:11.873673" elapsed="16.670707"/>
+<status status="PASS" start="2025-12-04T19:18:54.171855" elapsed="28.139713"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:51:28.544543" elapsed="0.503716"/>
+<status status="PASS" start="2025-12-04T19:19:22.312226" elapsed="0.555299"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:51:11.873175" elapsed="17.175175"/>
+<status status="PASS" start="2025-12-04T19:18:54.168553" elapsed="28.699273"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:29.048585" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:19:22.868715" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:51:29.048456" elapsed="0.589941"/>
+<status status="PASS" start="2025-12-04T19:19:22.868174" elapsed="1.374386"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:29.638740" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:19:24.244060" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:29.638561" elapsed="0.600848"/>
+<status status="PASS" start="2025-12-04T19:19:24.243210" elapsed="0.903706"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:30.239764" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:19:25.148192" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:30.239571" elapsed="0.537378"/>
+<status status="PASS" start="2025-12-04T19:19:25.147434" elapsed="0.856716"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:30.777329" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:51:31.107404" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:19:26.005829" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:19:26.570972" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:30.777113" elapsed="0.488314"/>
+<status status="PASS" start="2025-12-04T19:19:26.004863" elapsed="0.836597"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:31.265741" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:19:26.842634" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:31.265577" elapsed="0.612270"/>
+<status status="PASS" start="2025-12-04T19:19:26.841917" elapsed="1.184482"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:51:33.878391" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:19:30.028591" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:51:31.877999" elapsed="2.000503"/>
+<status status="PASS" start="2025-12-04T19:19:28.026952" elapsed="2.001950"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:51:11.873037" elapsed="22.005552"/>
+<status status="PASS" start="2025-12-04T19:18:54.167487" elapsed="35.862431"/>
 </kw>
 <kw name="Buy Product" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:33.879093" level="INFO">Clicking element 'xpath=//a[contains(@href, 'categoryId=FISH')]'.</msg>
+<msg time="2025-12-04T19:19:30.036470" level="INFO">Clicking element 'xpath=//a[contains(@href, 'categoryId=FISH')]'.</msg>
 <arg>${FishCategory}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:33.878945" elapsed="0.375551"/>
+<status status="PASS" start="2025-12-04T19:19:30.035564" elapsed="0.740320"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:34.254802" level="INFO">Clicking element 'xpath=//a[text()='FI-SW-01']'.</msg>
+<msg time="2025-12-04T19:19:30.776958" level="INFO">Clicking element 'xpath=//a[text()='FI-SW-01']'.</msg>
 <arg>xpath=//a[text()='FI-SW-01']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:34.254649" elapsed="0.488735"/>
+<status status="PASS" start="2025-12-04T19:19:30.776432" elapsed="0.740887"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:34.743714" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Add to Cart')]'.</msg>
+<msg time="2025-12-04T19:19:31.518560" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Add to Cart')]'.</msg>
 <arg>${AddToCartButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:34.743535" elapsed="0.436588"/>
+<status status="PASS" start="2025-12-04T19:19:31.517899" elapsed="0.732938"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:35.180616" level="INFO">Clicking element 'xpath=//a[text()='Proceed to Checkout']'.</msg>
+<msg time="2025-12-04T19:19:32.252295" level="INFO">Clicking element 'xpath=//a[text()='Proceed to Checkout']'.</msg>
 <arg>${ProceedToCheckout}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:35.180334" elapsed="0.414675"/>
+<status status="PASS" start="2025-12-04T19:19:32.251373" elapsed="0.760449"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:35.595337" level="INFO">Clicking button 'name=newOrder'.</msg>
+<msg time="2025-12-04T19:19:33.012954" level="INFO">Clicking button 'name=newOrder'.</msg>
 <arg>${ConfirmButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:35.595161" elapsed="0.514215"/>
+<status status="PASS" start="2025-12-04T19:19:33.012290" elapsed="1.031363"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:51:38.109957" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:19:36.044855" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:51:36.109549" elapsed="2.000517"/>
+<status status="PASS" start="2025-12-04T19:19:34.044118" elapsed="2.001029"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:51:33.878744" elapsed="4.231406"/>
+<status status="PASS" start="2025-12-04T19:19:30.031688" elapsed="6.013725"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:51:11.872835" elapsed="26.237355"/>
+<status status="PASS" start="2025-12-04T19:18:54.166178" elapsed="41.879400"/>
 </kw>
 <kw name="Log Out Test" owner="resources">
 <kw name="Log In" owner="resources">
 <kw name="OpenBrowserStackBrowser" owner="resources">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-12-04T16:51:38.111069" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
+<msg time="2025-12-04T19:19:36.049995" level="INFO">&amp;{capabilities} = { browserName=Edge | browserVersion=latest | os=Windows | osVersion=11 | name=RobotFrameworkTests (Edge) }</msg>
 <var>&amp;{capabilities}</var>
 <arg>browserName=${browser}</arg>
 <arg>browserVersion=latest</arg>
@@ -1269,96 +1269,96 @@
 <arg>osVersion=11</arg>
 <arg>name=RobotFrameworkTests (${browser})</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-12-04T16:51:38.110854" elapsed="0.000235"/>
+<status status="PASS" start="2025-12-04T19:19:36.049012" elapsed="0.001092"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:38.111353" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:51:38.111571" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
+<msg time="2025-12-04T19:19:36.051312" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:19:36.052417" level="INFO">Opening browser 'firefox' to base url 'about:blank' through remote server at 'https://bsuser_49HML6:pV7uy4M3hwKZX6ksKvJt@hub-cloud.browserstack.com/wd/hub'.</msg>
 <arg>about:blank</arg>
 <arg>remote_url=${REMOTE_URL}</arg>
 <arg>desired_capabilities=${capabilities}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:51:38.111182" elapsed="13.767114"/>
+<status status="PASS" start="2025-12-04T19:19:36.050516" elapsed="31.980041"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-12-04T16:51:51.878456" elapsed="0.418620"/>
+<status status="PASS" start="2025-12-04T19:20:08.031539" elapsed="0.538734"/>
 </kw>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2025-12-04T16:51:38.110678" elapsed="14.186490"/>
+<status status="PASS" start="2025-12-04T19:19:36.048214" elapsed="32.522528"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:52.297400" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
+<msg time="2025-12-04T19:20:08.571814" level="INFO">Opening url 'https://petstore.octoperf.com/actions/Catalog.action'</msg>
 <arg>${baseUrl}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2025-12-04T16:51:52.297270" elapsed="0.675489"/>
+<status status="PASS" start="2025-12-04T19:20:08.571282" elapsed="2.160814"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:52.973225" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
+<msg time="2025-12-04T19:20:10.733613" level="INFO">Clicking element 'xpath=//a[text()='Sign In']'.</msg>
 <arg>${SignInButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:52.972958" elapsed="0.478402"/>
+<status status="PASS" start="2025-12-04T19:20:10.732592" elapsed="1.003441"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:53.451724" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
+<msg time="2025-12-04T19:20:11.737354" level="INFO">Typing text 'adina_test' into text field 'name=username'.</msg>
 <arg>${LoginUser}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:53.451518" elapsed="0.449152"/>
+<status status="PASS" start="2025-12-04T19:20:11.736533" elapsed="0.801132"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:53.901018" level="INFO">Typing password into text field 'name=password'.</msg>
-<msg time="2025-12-04T16:51:54.210474" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-12-04T19:20:12.539264" level="INFO">Typing password into text field 'name=password'.</msg>
+<msg time="2025-12-04T19:20:13.133554" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${LoginPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:53.900821" elapsed="0.442482"/>
+<status status="PASS" start="2025-12-04T19:20:12.538244" elapsed="0.850659"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:54.343607" level="INFO">Clicking button 'name=signon'.</msg>
+<msg time="2025-12-04T19:20:13.389743" level="INFO">Clicking button 'name=signon'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:54.343448" elapsed="0.498302"/>
+<status status="PASS" start="2025-12-04T19:20:13.389278" elapsed="1.548925"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:51:56.842255" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:20:16.939511" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:51:54.841943" elapsed="2.000423"/>
+<status status="PASS" start="2025-12-04T19:20:14.938532" elapsed="2.001252"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:51:38.110539" elapsed="18.731921"/>
+<status status="PASS" start="2025-12-04T19:19:36.047275" elapsed="40.892779"/>
 </kw>
 <kw name="Log Out" owner="resources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-12-04T16:51:56.842952" level="INFO">Clicking element 'xpath=//a[text()='Sign Out']'.</msg>
+<msg time="2025-12-04T19:20:16.941452" level="INFO">Clicking element 'xpath=//a[text()='Sign Out']'.</msg>
 <arg>${LogOutButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-12-04T16:51:56.842809" elapsed="0.356363"/>
+<status status="PASS" start="2025-12-04T19:20:16.941102" elapsed="0.854464"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-12-04T16:51:59.199699" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-12-04T19:20:19.797415" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-12-04T16:51:57.199323" elapsed="2.000523"/>
+<status status="PASS" start="2025-12-04T19:20:17.796287" elapsed="2.001559"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-12-04T16:51:59.200043" elapsed="1.290301"/>
+<status status="PASS" start="2025-12-04T19:20:19.798324" elapsed="1.820001"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:51:56.842605" elapsed="3.647833"/>
+<status status="PASS" start="2025-12-04T19:20:16.940503" elapsed="4.678156"/>
 </kw>
-<status status="PASS" start="2025-12-04T16:51:38.110332" elapsed="22.380145"/>
+<status status="PASS" start="2025-12-04T19:19:36.046135" elapsed="45.572705"/>
 </kw>
 <var name="${browser}">Edge</var>
-<status status="PASS" start="2025-12-04T16:50:02.149673" elapsed="118.340832"/>
+<status status="PASS" start="2025-12-04T19:17:52.166053" elapsed="149.452896"/>
 </iter>
 <var>${browser}</var>
 <value>@{BROWSERS}</value>
-<status status="PASS" start="2025-12-04T16:45:52.090914" elapsed="368.399651"/>
+<status status="PASS" start="2025-12-04T19:13:07.204566" elapsed="434.414663"/>
 </for>
-<status status="PASS" start="2025-12-04T16:45:52.090498" elapsed="368.400355"/>
+<status status="PASS" start="2025-12-04T19:13:07.201979" elapsed="434.418501"/>
 </test>
-<status status="PASS" start="2025-12-04T16:45:51.806513" elapsed="368.684848"/>
+<status status="PASS" start="2025-12-04T19:13:05.003280" elapsed="436.620616"/>
 </suite>
 <statistics>
 <total>
@@ -1371,17 +1371,17 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2025-12-04T16:45:52.094948" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:46:24.439019" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:46:51.470222" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:47:28.375391" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:48:02.816721" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:48:37.361288" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:49:02.242157" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:49:30.164248" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:50:02.151415" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:50:35.658912" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:51:11.873843" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
-<msg time="2025-12-04T16:51:38.111353" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:13:07.227883" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:14:03.251459" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:14:28.066153" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:15:12.911473" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:15:44.589317" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:16:22.615250" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:16:51.497889" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:17:19.706835" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:17:52.175840" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:18:25.046470" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:18:54.172922" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-12-04T19:19:36.051312" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
 </errors>
 </robot>
