@@ -30,7 +30,7 @@ LoginPassword = "name=password"
 LoginButton = "name=signon"
 
 # Product
-FishCategory = "xpath=//area[@alt='Fish']"
+FishCategory = "xpath=//a[contains(@href, 'categoryId=FISH')]"
 AddToCartButton = "xpath=//a[contains(text(), 'Add to Cart')]"
 ProceedToCheckout = "xpath=//a[text()='Proceed to Checkout']"
 ConfirmButton = "name=newOrder"

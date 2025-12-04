@@ -2,10 +2,27 @@
 Library     SeleniumLibrary
 Variables   ./locators.py
 Variables   ./testData.py
+Variables  ./browserstack_variables.py
+
+*** Variables ***
+${REMOTE_URL}    https://${BROWSERSTACK_USER}:${BROWSERSTACK_KEY}@hub-cloud.browserstack.com/wd/hub
+
 
 *** Keywords ***
+OpenBrowserStackBrowser
+    [Arguments]    ${browser}
+    &{capabilities}=    Create Dictionary
+    ...    browserName=${browser}
+    ...    browserVersion=latest
+    ...    os=Windows
+    ...    osVersion=11
+    ...    name=RobotFrameworkTests (${browser})
+    Open Browser    about:blank    remote_url=${REMOTE_URL}    desired_capabilities=${capabilities}
+    Maximize Browser Window
+
 Sign Up
-    Open Browser    ${baseUrl}    chrome
+    OpenBrowserStackBrowser    ${BROWSER}
+    Go To    ${baseUrl}
     Maximize Browser Window
     Click Element    ${SignInButton}
     Click Element    ${RegisterNow}
@@ -26,7 +43,8 @@ Sign Up
     Close Browser
 
 Log In
-    Open Browser    ${baseUrl}    chrome
+    OpenBrowserStackBrowser    ${BROWSER}
+    Go To    ${baseUrl}
     Click Element    ${SignInButton}
     Input Text    ${LoginUser}    ${username}
     Input Password    ${LoginPassword}    ${password}
@@ -45,3 +63,19 @@ Log Out
     Click Element    ${LogOutButton}
     Sleep    2s
     Close Browser
+
+
+
+Sign Up Test
+    Sign Up
+
+Log In Test
+    Log In
+
+Buy Product Test
+    Log In
+    Buy Product
+
+Log Out Test
+    Log In
+    Log Out

@@ -1,18 +1,19 @@
-
 *** Settings ***
 Resource    ../resources/resources.robot
 
+*** Variables ***
+@{BROWSERS}    Chrome    Firefox    Edge
+
+
 *** Test Cases ***
-Sign Up Test
-    Sign Up
+ALL_TESTS
+    FOR    ${browser}    IN    @{BROWSERS}
+        Set Suite Variable    ${BROWSER}    ${browser}
+        Log To Console    Running in ${browser}
+        Sign Up Test
+        Log In Test
+        Buy Product Test
+        Log Out Test
+    END
 
-Log In Test
-    Log In
 
-Buy Product Test
-    Log In
-    Buy Product
-
-Log Out Test
-    Log In
-    Log Out

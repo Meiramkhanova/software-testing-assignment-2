@@ -1,3 +1,3 @@
-BROWSERSTACK_USER = "bsuser_SH9gNI"
-BROWSERSTACK_KEY = "6vbQsgQkxzXnHphbnxqY"
+BROWSERSTACK_USER = "bsuser_49HML6"
+BROWSERSTACK_KEY = "pV7uy4M3hwKZX6ksKvJt"
 REMOTE_URL = f"https://{BROWSERSTACK_USER}:{BROWSERSTACK_KEY}@hub.browserstack.com/wd/hub"
