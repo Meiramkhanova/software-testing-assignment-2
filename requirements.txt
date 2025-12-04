@@ -1,4 +1,4 @@
 robotframework==7.3.2
 robotframework-seleniumlibrary
 selenium
-requests
+browserstack-sdk
